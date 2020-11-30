@@ -1,20 +1,27 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import './styles.css';
+import WhiteLogo from '../../assets/images/white-logo.svg';
+import GreenLogo from '../../assets/images/green-logo.svg';
 
-const Navbar = ({ color }) => {
+
+import {
+    Header,
+    Content,
+    Navlinks,
+    Burguer,
+    Button
+} from './styles';
+
+const Navbar = ({ colored }) => {
     const [active, setActive] = useState(false);
     
     return (
-        <header>
-            <div className="header-content">
+        <Header>
+            <Content colored={colored}>
+                <img src={ colored ? GreenLogo : WhiteLogo } alt="RePet" />
 
-                <div className="logo-box">
-                    <img src="" alt="" />
-                </div>
-
-                <div className={`navlinks-container ${active && 'active'}`}>
+                <Navlinks active={active}>
                     <ul>
                         <li>
                             <Link to='/'>
@@ -27,16 +34,20 @@ const Navbar = ({ color }) => {
                                 Medalhas e Desafios
                             </Link>
                         </li>
-                    </ul>
-                </div>
 
-                <div className="burger-box" onClick={() => setActive(!active)}>
+                        <Button nav label='Entrar'/>
+                    </ul>
+                </Navlinks>
+
+                <Burguer active={active} onClick={() => setActive(!active)}>
                     <div className={active && 'active'}/>
                     <div className={active && 'active'}/>
                     <div className={active && 'active'}/>
-                </div>
-            </div>
-        </header>
+                </Burguer>
+
+                <Button label='Entrar' />
+            </Content>
+        </Header>
     );
 };
 

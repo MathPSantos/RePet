@@ -1,13 +1,4 @@
-import React from 'react';
+export { default as Flat } from './Flat';
 
-import './styles.css';
+export { default as Outline } from './Outline';
 
-const Button = ({ outlined, text }) => {
-    return (
-        <button className={`${outlined && 'outlined'}`}>
-            {text}
-        </button>
-    )
-};
-
-export default Button;
