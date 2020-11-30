@@ -1,13 +1,13 @@
 import React from 'react';
-import Button from '../../components/Button';
+import { Flat } from '../../components/Button';
 import Navbar from '../../components/Navbar';
 
 const Home = () => {
     return (
         <>
-            <Navbar color />
+            <Navbar colored />
             <h1>Home</h1>
-            <Button text='Participe do RePet'/>
+            <Flat label='Participe do RePet'/>
         </>
     )
 };
