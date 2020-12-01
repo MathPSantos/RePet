@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { DefaultContainer } from '../Default/styles';
 
 export const Container = styled(DefaultContainer)`
-    padding: 12px 28px;
+    padding: 12px 24px;
 
     background: ${({ theme }) => theme.colors.button.flat.background};
     border: 1px solid ${({ theme }) => theme.colors.button.flat.border};
@@ -18,5 +18,9 @@ export const Container = styled(DefaultContainer)`
 
     &:after {
         background: ${({ theme }) => theme.colors.button.flat.shadow};
+    }
+
+    @media screen and (min-width: 720px) {
+        padding: 12px 28px;      
     }
 `;
