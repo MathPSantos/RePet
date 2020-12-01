@@ -7,7 +7,7 @@ export const colors = {
         lightSecondary: '#A3DFB4',
     },
 
-    typograph: {
+    typography: {
         primary: '#313131',
         secondary: '#444444',
         tertiary: '#FFFFFF',
