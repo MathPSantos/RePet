@@ -2,11 +2,13 @@ import styled from 'styled-components';
 
 export const Container = styled.footer`
   width: 100%;
-  background: '#139036';
+  background: #139036;
 
   display: flex;   
   justify-content: center;
   align-items: center;
+  
+  margin-top: 32px;
 `;
 
 export const Content = styled.div`
