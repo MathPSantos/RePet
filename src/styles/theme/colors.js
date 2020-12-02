@@ -3,7 +3,7 @@ export const colors = {
         primary: '#FBFBFB',
         lightPrimary: '#F6F6F6',
 
-        secondary: 'linear-gradient(181.87deg, #3AC661 -27.98%, #2DB252 137.93%)',
+        secondary: '#2DB252',
         lightSecondary: '#A3DFB4',
     },
 
