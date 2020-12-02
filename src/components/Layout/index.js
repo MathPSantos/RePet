@@ -2,7 +2,7 @@ import React from 'react';
 
 import {
   Container,
-  Content,
+  Main
 } from './styles';
 
 import Navbar from '../Navbar';
@@ -14,9 +14,9 @@ const Layout = ({ colored, children }) => {
     <Container>
       <Navbar colored={colored} />
 
-      <Content>
+      <Main>
         {children}
-      </Content>
+      </Main>
 
       <Footer />
     </Container>
