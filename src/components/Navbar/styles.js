@@ -3,11 +3,17 @@ import styled from 'styled-components';
 import { Outline } from '../Button';
 
 export const Header = styled.header`
+    position: fixed;
+    top: 0;
+    left: 0;
+
     width: 100%;
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    z-index: 2;
 `;
 
 export const Content = styled.nav`
@@ -76,6 +82,8 @@ export const Navlinks = styled.div`
         width: initial;
         height: initial;
 
+        background: transparent;
+
         transform: translate(0);
 
         > ul {
@@ -102,7 +110,7 @@ export const Burguer = styled.div`
         width: 26px;
         height: 3px;
 
-        background-color: #313131;
+        background-color: ${({ colored, active }) => colored ? '#FFFFFF' : '#313131'}; 
 
         transition: all .3s;
     }

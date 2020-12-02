@@ -21,7 +21,7 @@ const Navbar = ({ colored }) => {
             <Content colored={colored}>
                 <img src={ colored ? GreenLogo : WhiteLogo } alt="RePet" />
 
-                <Navlinks active={active}>
+                <Navlinks colored={colored} active={active}>
                     <ul>
                         <li>
                             <Link to='/'>
@@ -39,10 +39,10 @@ const Navbar = ({ colored }) => {
                     </ul>
                 </Navlinks>
 
-                <Burguer active={active} onClick={() => setActive(!active)}>
-                    <div className={active && 'active'}/>
-                    <div className={active && 'active'}/>
-                    <div className={active && 'active'}/>
+                <Burguer colored={colored} active={active} onClick={() => setActive(!active)}>
+                    <div/>
+                    <div/>
+                    <div/>
                 </Burguer>
 
                 <Button label='Entrar' />
