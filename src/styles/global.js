@@ -43,7 +43,7 @@ const GlobalStyle = createGlobalStyle`
         width: 100%;
         font-family: ${({ theme }) => theme.fonts.primary};
         background: ${({ theme }) => theme.colors.background.primary};
-        overflow: hidden;
+        overflow-x: hidden;
     }
 
     #root {
