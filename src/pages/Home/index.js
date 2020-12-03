@@ -4,7 +4,7 @@ import Layout from '../../components/Layout';
 import { Heading, Paragraph } from '../../components/Typography';
 import { Flat } from '../../components/Button';
 
-import useWindowDimensions from '../../hooks/windowSize';
+// import useWindowDimensions from '../../hooks/windowSize';
 
 import {
     LandingSec,
@@ -21,7 +21,7 @@ import WaveGreen from '../../assets/images/wave-green.svg';
 import WaveWhite from '../../assets/images/wave-white.svg';
 
 const Home = () => {
-    const { width } = useWindowDimensions();
+    // const { width } = useWindowDimensions();
 
     return (
         <Layout as='main'>
@@ -60,7 +60,7 @@ const Home = () => {
                     <img src={GameIlustration} alt="Ilustração"/>
                 </SectionCon>
 
-                <img src={WaveGreen}/>
+                <img src={WaveGreen} alt=''/>
             </Section>
 
             <Section color='green' >
@@ -81,7 +81,7 @@ const Home = () => {
                     <img src={GameIlustration} alt="Ilustração"/>
                 </SectionCon>
 
-                <img src={WaveWhite}/>
+                <img src={WaveWhite} alt=''/>
             </Section>
 
             <Section>
@@ -99,7 +99,7 @@ const Home = () => {
                     <img src={Avatar} alt="Avatar"/>
                 </SectionCon>
 
-                <img src={WaveGreen}/>
+                <img src={WaveGreen} alt=''/>
             </Section>
 
             <Section color='green' >
