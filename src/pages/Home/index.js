@@ -1,127 +1,145 @@
-import React from 'react';
+import React from "react";
 
-import Layout from '../../components/Layout';
-import { Heading, Paragraph } from '../../components/Typography';
-import { Flat } from '../../components/Button';
+import Layout from "../../components/Layout";
+import { Heading, Paragraph } from "../../components/Typography";
+import { Flat } from "../../components/Button";
 
-// import useWindowDimensions from '../../hooks/windowSize';
+import useWindowDimensions from "../../hooks/windowSize";
 
 import {
-    LandingSec,
-    LandingCon,
-    Section,
-    SectionCon,
-    TextContainer
-} from './styles.js';
+  LandingSec,
+  LandingCon,
+  Section,
+  SectionCon,
+  TextContainer,
+  RanklingCon,
+} from "./styles.js";
 
-import GameIlustration from '../../assets/images/game-ilustration.png';
-import Avatar from '../../assets/images/avatar.png';
+import Background from "../../assets/images/landing-background.svg";
+import Ilustration from "../../assets/images/landing-ilustration.svg";
+import GameIlustration from "../../assets/images/game-ilustration.png";
+import Missions1 from "../../assets/images/missions1.svg";
+import Missions2 from "../../assets/images/missions2.svg";
+import Avatar from "../../assets/images/avatar.png";
+import Ranking1 from "../../assets/images/ranking1.svg";
+import Ranking2 from "../../assets/images/ranking2.svg";
 
-import WaveGreen from '../../assets/images/wave-green.svg';
-import WaveWhite from '../../assets/images/wave-white.svg';
+import WaveGreen from "../../assets/images/wave-green.svg";
+import WaveWhite from "../../assets/images/wave-white.svg";
 
 const Home = () => {
-    // const { width } = useWindowDimensions();
+  const { width } = useWindowDimensions();
 
-    return (
-        <Layout as='main'>
-            <LandingSec>
-                <LandingCon>
+  return (
+    <Layout as="main">
+      <LandingSec>
+        <LandingCon>
+          <Heading resAlign="center" color="white">
+            Você está preparado pro futuro?
+          </Heading>
 
-                    <Heading
-                        resAlign='center'
-                        color='white'
-                    >
-                        Você está preparado pro futuro?
-                    </Heading>
+          <Paragraph resAlign="center" color="white">
+            O jogo RePet te convida a fazer parte do projeto piloto da cidade do
+            futuro, mas para isso você precisa adquirir as doze insígnias
+            animalias e se tornar um cidadão responsável.
+          </Paragraph>
 
-                    <Paragraph
-                        resAlign='center'
-                        color='white'
-                    >
-                        O  jogo RePet te convida a fazer parte do projeto piloto da cidade do futuro, mas para isso você precisa adquirir as doze insígnias animalias e se tornar um cidadão responsável.
-                    </Paragraph>
+          <Flat label="Participe do RePet" />
+        </LandingCon>
 
-                    <Flat label='Participe do RePet' />
-                </LandingCon>
-            </LandingSec>
-            <Section>
-                <SectionCon>
-                    <TextContainer>
-                        <Heading
-                            size='small'
-                        >
-                            A diversão que vai além do ambiente digital!
-                        </Heading>
+        <img className="background" src={Background} alt=""/>
+        <img className="ilustration" src={Ilustration} alt=""/>
+      </LandingSec>
 
-                        <Paragraph>Seu lixo agora vale muitos pontos e consquistas. Participe ativamente por meio da coleta seletiva e conecte-se ao mundo real.</Paragraph>
-                    </TextContainer>
+      <Section>
+        <SectionCon>
+          <TextContainer>
+            <Heading size="sm">
+              A diversão que vai além do ambiente digital!
+            </Heading>
 
-                    <img src={GameIlustration} alt="Ilustração"/>
-                </SectionCon>
+            <Paragraph>
+              Seu lixo agora vale muitos pontos e consquistas. Participe
+              ativamente por meio da coleta seletiva e conecte-se ao mundo real.
+            </Paragraph>
+          </TextContainer>
 
-                <img src={WaveGreen} alt=''/>
-            </Section>
+          <img src={GameIlustration} alt="Ilustração" />
+        </SectionCon>
 
-            <Section color='green' >
-                <SectionCon reverse >
-                    <TextContainer>
-                        <Heading
-                            size='small'
-                            color='white'
-                        >
-                            Pontue, conquiste, cumpra missões e transforme
-                        </Heading>
+        <img src={WaveGreen} alt="" />
+      </Section>
 
-                        <Paragraph 
-                            color='white'
-                        >Todos os dias novos desafios serão apresentados, duele com seus amigos e compartilhe suas vitórias. </Paragraph>
-                    </TextContainer>
+      <Section color="green">
+        <SectionCon reverse>
+          <TextContainer>
+            <Heading size="sm" color="white">
+              Pontue, conquiste, cumpra missões e transforme
+            </Heading>
 
-                    <img src={GameIlustration} alt="Ilustração"/>
-                </SectionCon>
+            <Paragraph color="white">
+              Todos os dias novos desafios serão apresentados, duele com seus
+              amigos e compartilhe suas vitórias.{" "}
+            </Paragraph>
+          </TextContainer>
 
-                <img src={WaveWhite} alt=''/>
-            </Section>
+          <img src={width <= 860 ? Missions2 : Missions1} alt="Ilustração" />
+        </SectionCon>
 
-            <Section>
-                <SectionCon>
-                    <TextContainer>
-                        <Heading
-                            size='small'
-                        >
-                           Cusomize seu avatar com a sua cara
-                        </Heading>
+        <img src={WaveWhite} alt="" />
+      </Section>
 
-                        <Paragraph>Seu avatar é um reflexo de você ou de quem você quer ser, por isso é você quem deixa ele do jeitinho que quiser. </Paragraph>
-                    </TextContainer>
+      <Section>
+        <SectionCon>
+          <TextContainer>
+            <Heading size="sm">Cusomize seu avatar com a sua cara</Heading>
 
-                    <img src={Avatar} alt="Avatar"/>
-                </SectionCon>
+            <Paragraph>
+              Seu avatar é um reflexo de você ou de quem você quer ser, por isso
+              é você quem deixa ele do jeitinho que quiser.{" "}
+            </Paragraph>
+          </TextContainer>
 
-                <img src={WaveGreen} alt=''/>
-            </Section>
+          <img src={Avatar} alt="Avatar" />
+        </SectionCon>
 
-            <Section color='green' >
-                <SectionCon reverse >
-                    <TextContainer>
-                        <Heading
-                            size='small'
-                            color='white'
-                        >
-                            Pontue, conquiste, cumpra missões e transforme
-                        </Heading>
+        <img src={WaveGreen} alt="" />
+      </Section>
 
-                        <Paragraph 
-                            color='white'
-                        >Todos os dias novos desafios serão apresentados, duele com seus amigos e compartilhe suas vitórias. </Paragraph>
-                    </TextContainer>
+      <Section color="green">
+        <RanklingCon>
+          <Heading resAlign="center" size="sm" align="center" color="white">
+            Veja como está a sua pontuação e dos outros participantes da sua
+            escola
+          </Heading>
 
-                    <img src={GameIlustration} alt="Ilustração"/>
-                </SectionCon>
-            </Section>
-        </Layout>
-    )
+          <Paragraph
+            style={{ marginTop: 18, marginBottom: 60 }}
+            resAlign="center"
+            align="center"
+            color="white"
+          >
+            Acompanhe o Ranking e descubra uma sociedade disposta a escrever o
+            futuro.
+          </Paragraph>
+
+          <img src={width <= 860 ? Ranking2 : Ranking1} alt="Ilustração" />
+
+          <Heading
+            style={{ marginTop: 40, marginBottom: 24 }}
+            resAlign="center"
+            size="sm"
+            align="center"
+            color="white"
+          >
+            Vamos mudar a realidade juntos?
+          </Heading>
+
+          <Flat label="Participe do RePet" />
+        </RanklingCon>
+      </Section>
+    </Layout>
+  );
 };
 
 export default Home;
