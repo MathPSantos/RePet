@@ -33,7 +33,7 @@ const Navbar = ({ colored }) => {
       window.addEventListener("scroll", debounce(handleScroll));
       return () => window.removeEventListener("scroll", debounce(handleScroll));
     },
-    [debounce] // If you remove this, things go 🍌🍌🍌
+    [] // If you remove this, things go 🍌🍌🍌
   );
 
   return (
