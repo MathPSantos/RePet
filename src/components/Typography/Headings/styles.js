@@ -7,7 +7,7 @@ export const Heading = styled.h1`
 
   text-align: ${({ align }) => align ? align : 'left' };
 
-  @media screen and (min-width: 720px) {
+  @media screen and (min-width: 860px) {
     text-align: ${({ resAlign }) => resAlign ? resAlign : 'left'};
     font-size: ${({ size }) => size === 'sm' && '36px' };
   }
