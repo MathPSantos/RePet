@@ -18,7 +18,7 @@ export const DefaultCon = styled.div`
 
   padding: 124px 20px;
 
-  @media screen and (min-width: 720px) {
+  @media screen and (min-width: 860px) {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -75,7 +75,7 @@ export const LandingCon = styled(DefaultCon)`
     margin-top: 32px;
   }
 
-  @media screen and (min-width: 720px) {
+  @media screen and (min-width: 860px) {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
@@ -106,7 +106,7 @@ export const Section = styled(DefaultSec)`
     width: 100%;
   }
 
-  @media screen and (min-width: 720px) {
+  @media screen and (min-width: 860px) {
     > img {
       display: block;
     }
