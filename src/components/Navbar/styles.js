@@ -14,6 +14,11 @@ export const Header = styled.header`
     align-items: center;
 
     z-index: 2;
+
+    background: ${({ scrolled, theme }) => scrolled && theme.colors.background.primary};
+
+    box-shadow: ${({ scrolled, theme }) => scrolled && '0px 4px 4px rgba(0,0,0,0.15)'};
+    transition: all .2s;
 `;
 
 export const Content = styled.nav`
@@ -73,7 +78,8 @@ export const Navlinks = styled.div`
     > ul li a {
         text-decoration: none;
         font: 800 20px ${({ theme }) => theme.fonts.primary}, sans-serif;
-        color: #313131;
+        color: ${({ theme, colored, scrolled, active }) => colored || scrolled || active ? theme.colors.typography.primary : theme.colors.typography.tertiary};
+        transition: all .2s;
     }
 
     @media screen and (min-width: 720px) {
@@ -110,7 +116,7 @@ export const Burguer = styled.div`
         width: 26px;
         height: 3px;
 
-        background-color: ${({ colored, active }) => colored ? '#FFFFFF' : '#313131'}; 
+        background-color: ${({ colored, scrolled }) => colored || scrolled ? '#313131' : '#FFF'}; 
 
         transition: all .3s;
     }
