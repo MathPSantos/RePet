@@ -7,7 +7,7 @@ export const Paragraph = styled.p`
 
   text-align: ${({ align }) => align ? align : 'left' };
 
-  @media screen and (min-width: 720px) {
+  @media screen and (min-width: 860px) {
     text-align: ${({ resAlign }) => resAlign ? resAlign : 'left'};
   }
 `
