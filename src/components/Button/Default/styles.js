@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
-export const DefaultContainer = styled.button`
+export const DefaultContainer = styled(Link)`
     position: relative;
 
     border: none;
