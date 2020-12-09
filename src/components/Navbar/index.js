@@ -45,7 +45,7 @@ const Navbar = ({ colored }) => {
             alt="RePet"
           />
         </Link>
-        
+
         <Navlinks
           scrolled={scrollY >= 100 ? true : false}
           colored={colored}
@@ -60,7 +60,7 @@ const Navbar = ({ colored }) => {
               <Link to="/">Medalhas e Desafios</Link>
             </li>
 
-            <Button nav label="Entrar" />
+            <Button to="/login" nav label="Entrar" />
           </ul>
         </Navlinks>
 
