@@ -25,7 +25,7 @@ const Login = () => {
         <NavContent>
           <img src={GreenLogo} alt="RePet"/>
 
-          <button onClick={() => history.goBack()}>
+          <button style={{cursor: 'pointer'}} onClick={() => history.goBack()}>
             <FiArrowLeft size={18} color='#FFFFFF' />
           </button>
         </NavContent>
@@ -48,10 +48,10 @@ const Login = () => {
           </div>
 
           <div className="form-actions">
-            <div className="remember-container">
+            <div style={{cursor: 'pointer'}} className="remember-container">
               {remember ? (<FiCheckSquare onClick={() => setRemember(!remember)} size={20} color='#19992E' />) : (<FiSquare onClick={() => setRemember(!remember)} size={20} color='#19992E' />)}
             
-              <span>Lembrar de mim</span>
+              <span onClick={() => setRemember(!remember)}>Lembrar de mim</span>
             </div>
 
             <span>Esqueci minha senha</span>
