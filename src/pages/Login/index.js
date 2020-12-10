@@ -23,7 +23,7 @@ const Login = () => {
     <Container>
       <Navbar>
         <NavContent>
-          <img src={GreenLogo} alt="RePet"/>
+          <img style={{cursor: 'pointer'}} onClick={() => history.push('/')} src={GreenLogo} alt="RePet"/>
 
           <button style={{cursor: 'pointer'}} onClick={() => history.goBack()}>
             <FiArrowLeft size={18} color='#FFFFFF' />
