@@ -57,7 +57,7 @@ const Navbar = ({ colored }) => {
             </li>
 
             <li>
-              <Link to="/">Medalhas e Desafios</Link>
+              <Link to="/medalhas">Medalhas e Desafios</Link>
             </li>
 
             <Button to="/login" nav label="Entrar" />
