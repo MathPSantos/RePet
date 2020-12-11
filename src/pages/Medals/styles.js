@@ -1,10 +1,29 @@
 import styled from "styled-components";
 
 export const MedalsContainer = styled.section`
+  position: relative;
+
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  > img {
+    width: 100%;
+
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+
+    display: none;
+  }
+
+  @media screen and (min-width: 860px) {
+    > img {
+      display: block;
+    }
+  }
 `;
 
 export const MedalsContent = styled.div`
@@ -134,3 +153,49 @@ export const MedalInfoContent = styled.div`
     }
   }
 `;
+
+export const DetritosContainer = styled.section`
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: ${({ theme }) => theme.colors.background.secondary};
+`;
+
+export const DetritosContent = styled.div`
+  width: 100%;
+  max-width: 1160px;
+
+  padding: 132px 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  z-index: 1;
+
+  > img {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  > h1:first-child, p {
+    margin-right: auto;
+  }
+
+  > p {
+    margin-bottom: 40px;
+  }
+
+  @media screen and (min-width: 860px) {
+    padding-top: 90px;
+    padding-bottom: 160px;
+
+    > img {
+      max-width: 100%;
+    }
+  }
+`;
+
