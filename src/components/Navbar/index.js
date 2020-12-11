@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 import WhiteLogo from "../../assets/images/white-logo.svg";
 import GreenLogo from "../../assets/images/green-logo.svg";
 
-import { Header, Content, Navlinks, Burguer, Button } from "./styles";
+import { Header, Content, Navlinks, Burguer } from "./styles";
+import { Outline } from "../Button";
 
 export function debounce(func, wait = 5, immediate = true) {
   let timeout;
@@ -23,6 +24,8 @@ export function debounce(func, wait = 5, immediate = true) {
 }
 
 const Navbar = ({ colored }) => {
+  const history = useHistory();
+
   const [active, setActive] = useState(false);
 
   const [scrollY, setScrollY] = useState(window.scrollY);
@@ -60,7 +63,7 @@ const Navbar = ({ colored }) => {
               <Link to="/medalhas">Medalhas e Desafios</Link>
             </li>
 
-            <Button to="/login" nav label="Entrar" />
+            <Outline onClick={() => history.push('/login')} nav label="Entrar" />
           </ul>
         </Navlinks>
 
@@ -75,7 +78,7 @@ const Navbar = ({ colored }) => {
           <div />
         </Burguer>
 
-        <Button label="Entrar" />
+        <Outline onClick={() => history.push('/login')} label="Entrar" />
       </Content>
     </Header>
   );

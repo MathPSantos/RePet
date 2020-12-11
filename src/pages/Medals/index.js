@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useHistory } from 'react-router-dom';
 
 import Layout from "../../components/Layout";
 import { Heading, Paragraph } from "../../components/Typography";
@@ -10,7 +11,6 @@ import Autonomia from "../../assets/images/medals/autonomia.png";
 import Determinacao from "../../assets/images/medals/determinacao.png";
 import Empatia from "../../assets/images/medals/empatia.png";
 import Percepcao from "../../assets/images/medals/percepcao.png";
-// import Platina from "../../assets/images/medals/platina.png";
 import Resistencia from "../../assets/images/medals/resistencia.png";
 import Sabedoria from "../../assets/images/medals/sabedoria.png";
 import Sagacidade from "../../assets/images/medals/sagacidade.png";
@@ -120,19 +120,12 @@ const medals = [
     description:
       "Senso de justiça: para com o intuito de persuadir contra a caça das espécies pelo homem ",
     power: "",
-  },
-  // {
-  //   name: "Platina",
-  //   nickname: "Platina",
-  //   image: Platina,
-  //   imageAlt: "Platina",
-  //   description: "Vitalidade da arara azul",
-  //   power: "",
-  // },
+  }
 ];
 
 const Medals = () => {
   const { width } = useWindowDimensions();
+  const history = useHistory();
 
   const [medalId, setMedalId] = useState(0);
 
@@ -245,7 +238,7 @@ const Medals = () => {
             Vamos mudar a realidade juntos?
           </Heading>
 
-          <Flat label="Participe do RePet" />
+          <Flat onClick={() => history.push('/login')} label="Participe do RePet" />
         </DetritosContent>
       </DetritosContainer>
     </Layout>
