@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 
 import Layout from "../../components/Layout";
 import { Heading, Paragraph } from "../../components/Typography";
@@ -24,6 +25,7 @@ import WaveWhite from "../../assets/images/wave-white.svg";
 
 const HowPlay = () => {
   const { width } = useWindowDimensions();
+  const history = useHistory();
 
   return (
     <Layout colored>
@@ -103,7 +105,7 @@ const HowPlay = () => {
               Sua escola já faz parte?
             </Heading>
 
-            <Flat label="Participar do RePet" />
+            <Flat onClick={() => history.push('/login')} label="Participar do RePet" />
           </div>
 
           <div>

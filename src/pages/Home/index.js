@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from 'react-router-dom'
 
 import Layout from "../../components/Layout";
 import { Heading, Paragraph } from "../../components/Typography";
@@ -29,6 +30,7 @@ import WaveWhite from "../../assets/images/wave-white.svg";
 
 const Home = () => {
   const { width } = useWindowDimensions();
+  const history = useHistory();
 
   return (
     <Layout as="main">
@@ -44,7 +46,7 @@ const Home = () => {
             animalias e se tornar um cidadão responsável.
           </Paragraph>
 
-          <Flat label="Participe do RePet" />
+          <Flat onClick={() => history.push('/login')} label="Participe do RePet" />
         </LandingCon>
 
         <img className="background" src={Background} alt=""/>
@@ -135,7 +137,7 @@ const Home = () => {
             Vamos mudar a realidade juntos?
           </Heading>
 
-          <Flat label="Participe do RePet" />
+          <Flat onClick={() => history.push('/login')} label="Participe do RePet" />
         </RanklingCon>
       </Section>
     </Layout>

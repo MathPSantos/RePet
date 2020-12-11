@@ -3,13 +3,13 @@ import React from 'react';
 import { Container } from './styles';
 
 const Outline = ({ 
-    to,
+    nav,
     label,
     onClick,
     ...rest
 }) => {
     return(
-        <Container onClick={onClick} to={to} {...rest}>
+        <Container nav={nav} onClick={onClick} {...rest}>
             {label}
         </Container>
     )
